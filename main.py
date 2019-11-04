@@ -121,7 +121,6 @@ def start():
         os.system('adb pull /sdcard/screenshot.png ./screenshot.png')
         im = Image.open('./screenshot.png').convert('RGB')
         im.save('./record/imageNor_' + str(img_i) + '.jpg')
-        im = im.transpose(Image.ROTATE_90)
         distance = getDst(im)
         im.save('./record/image_' + str(img_i) + '.jpg')
         print("D:"+str(distance))
